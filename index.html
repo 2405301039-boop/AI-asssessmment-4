@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dayglow | Fuel Your Glow</title>
+    <meta name="description" content="Dayglow is a bold, modern café for a vibrant aesthetic culture.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@400;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons (Phosphor Icons for sleek modern look) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+
+<body>
+
+    <!-- Animated Full Background -->
+    <div class="bg-animated"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="#" class="nav-logo">DAYGLOW</a>
+
+        <div class="nav-links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#location">Location</a>
+        </div>
+
+        <div class="nav-toggle" id="navToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+        <!-- Background particle effect canvas layer inside JS -->
+        <div class="hero-particles" id="particlesContainer"></div>
+        <div class="hero-glow"></div>
+
+        <div class="hero-content">
+            <h1>DAYGLOW</h1>
+            <p class="tagline">Fuel Your Glow.</p>
+            <button class="btn-glow"
+                onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})">Explore Menu</button>
+        </div>
+
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about-section">
+        <div class="section-header reveal">
+            <span class="section-label">Our Story</span>
+            <h2 class="section-title">Vibrant Modern <span class="highlight">Culture</span></h2>
+            <p class="section-subtitle">More than just coffee. It's an aesthetic experience, a creative hub, and the
+                heartbeat of the neon generation.</p>
+        </div>
+
+        <div class="about-grid">
+            <div class="about-text reveal-left">
+                <p>Welcome to <span class="accent">Dayglow</span>, where artisanal roasting meets futuristic ambition.
+                    We source the finest beans globally and extract them in an environment designed to elevate your
+                    senses.</p>
+                <p>Designed for the bold and the energetic, our spaces run on high frequencies, glowing neon, and
+                    unmatched caffeine.</p>
+
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Vibes</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Locations</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">∞</div>
+                        <div class="stat-label">Energy</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-image-group reveal-right">
+                <div class="about-img-card">
+                    <img src="images/cafe-interior.png" alt="Aesthetic neon cafe interior">
+                </div>
+                <div class="about-img-card">
+                    <img src="images/coffee-cup.png" alt="Artisanal Latte Art">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section id="menu" class="menu-section">
+        <div class="section-header reveal">
+            <span class="section-label">The Fuel</span>
+            <h2 class="section-title">Signature <span class="highlight">Menu</span></h2>
+            <p class="section-subtitle">Crafted with precision, served with attitude.</p>
+        </div>
+
+        <div class="menu-grid stagger-children">
+            <!-- Item 1 -->
+            <div class="menu-card">
+                <i class="ph ph-coffee menu-icon" style="color: #ff9a44"></i>
+                <h3>Neon Espresso</h3>
+                <p>Double shot of our darkest roast. High octane energy to kickstart your matrix.</p>
+                <div class="menu-price">$4.50</div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="menu-card">
+                <i class="ph ph-drop menu-icon" style="color: #a855f7"></i>
+                <h3>Midnight Cold Brew</h3>
+                <p>Steeped for 18 hours. Smooth, intense, served over crystal clear ice cubes.</p>
+                <div class="menu-price">$5.50</div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="menu-card">
+                <i class="ph ph-martini menu-icon" style="color: #ff6a00"></i>
+                <h3>Cyber Matcha</h3>
+                <p>Ceremonial grade matcha with layered oat milk and a hint of vanilla glow.</p>
+                <div class="menu-price">$6.00</div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="menu-card">
+                <i class="ph ph-croissant menu-icon" style="color: #7c3aed"></i>
+                <h3>Void Croissant</h3>
+                <p>Charcoal-infused butter pastry with a molten dark chocolate center.</p>
+                <div class="menu-price">$4.00</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery-section">
+        <div class="section-header reveal">
+            <span class="section-label">The aesthetic</span>
+            <h2 class="section-title">See The <span class="highlight">Glow</span></h2>
+        </div>
+
+        <div class="gallery-grid stagger-children">
+            <div class="gallery-item">
+                <img src="images/cafe-interior.png" alt="Cafe Interior">
+                <div class="gallery-overlay">
+                    <h4>The Lounge</h4>
+                    <p>Neon ambient lighting and raw textures.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/coffee-cup.png" alt="Latte Art">
+                <div class="gallery-overlay">
+                    <h4>Precision Pours</h4>
+                    <p>Artisanal hot drinks.</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="images/cold-brew.png" alt="Cold Brew">
+                <div class="gallery-overlay">
+                    <h4>Iced Signatures</h4>
+                    <p>Caramel drizzle cold brew perfection.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LOCATION SECTION -->
+    <section id="location" class="location-section">
+        <div class="location-grid">
+            <div class="location-card reveal-left">
+                <span class="section-label">Find Us</span>
+                <h3>Neon District Hub</h3>
+
+                <div class="icon-text">
+                    <i class="ph ph-map-pin icon"></i>
+                    <p>2049 Synthesis Blvd.<br>Sector 4, Cyber City 8810</p>
+                </div>
+
+                <div class="icon-text">
+                    <i class="ph ph-envelope-simple icon"></i>
+                    <p>hello@dayglow.cafe<br>+1 (800) 555-GLOW</p>
+                </div>
+
+                <div class="map-placeholder">
+                    <span><i class="ph ph-map-trifold" style="color: rgba(255,255,255,0.2)"></i></span>
+                </div>
+            </div>
+
+            <div class="location-card reveal-right">
+                <span class="section-label">Operating</span>
+                <h3>Hours</h3>
+
+                <div class="hours-grid">
+                    <div class="hours-row">
+                        <span class="day">Monday - Wednesday</span>
+                        <span class="time">07:00 - 20:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Thursday - Friday</span>
+                        <span class="time">07:00 - 23:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Saturday</span>
+                        <span class="time">08:00 - 01:00</span>
+                    </div>
+                    <div class="hours-row">
+                        <span class="day">Sunday</span>
+                        <span class="time">09:00 - 21:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-brand">DAYGLOW</div>
+
+            <div class="nav-links" style="display:flex; gap: 1.5rem">
+                <a href="#about" style="font-size: 0.75rem">Story</a>
+                <a href="#menu" style="font-size: 0.75rem">Menu</a>
+                <a href="#location" style="font-size: 0.75rem">Visit</a>
+            </div>
+
+            <div class="footer-social">
+                <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                <a href="#"><i class="ph ph-tiktok-logo"></i></a>
+                <a href="#"><i class="ph ph-twitter-logo"></i></a>
+            </div>
+
+            <div class="footer-copy">
+                &copy; <span id="year"></span> Dayglow Café. All rights reserved. Designed for the bold.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+
+    <!-- ✨ GLOWIEEE — Premium Chatbase Chat Integration -->
+    <style>
+        /* ============================================
+           GLOWIEEE CHATBOT — COMPLETE STYLE SYSTEM
+        ============================================ */
+
+        /* --- Greeting Bubble --- */
+        #glowieee-greeting {
+            position: fixed;
+            bottom: 108px;
+            right: 24px;
+            z-index: 10001;
+            background: linear-gradient(135deg, rgba(20, 10, 35, 0.97), rgba(30, 12, 50, 0.97));
+            border: 1.5px solid rgba(255, 106, 0, 0.5);
+            border-radius: 18px 18px 4px 18px;
+            padding: 14px 18px;
+            max-width: 240px;
+            box-shadow: 0 0 30px rgba(255, 106, 0, 0.2), 0 8px 32px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transform: translateY(12px) scale(0.9);
+            transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            pointer-events: none;
+        }
+
+        #glowieee-greeting.show {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+            pointer-events: auto;
+        }
+
+        #glowieee-greeting p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.88);
+            margin: 0 0 8px 0;
+            line-height: 1.5;
+        }
+
+        #glowieee-greeting strong {
+            color: #ff9a44;
+        }
+
+        #glowieee-greeting-cta {
+            display: inline-block;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.07em;
+            color: #0a050f;
+            background: linear-gradient(90deg, #ff6a00, #a855f7);
+            padding: 5px 14px;
+            border-radius: 20px;
+            cursor: pointer;
+            border: none;
+            transition: opacity 0.2s, transform 0.2s;
+        }
+
+        #glowieee-greeting-cta:hover {
+            opacity: 0.88;
+            transform: scale(1.04);
+        }
+
+        #glowieee-greeting-dismiss {
+            position: absolute;
+            top: 8px;
+            right: 10px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.3);
+            font-size: 0.85rem;
+            cursor: pointer;
+            line-height: 1;
+            padding: 0;
+            transition: color 0.2s;
+        }
+
+        #glowieee-greeting-dismiss:hover {
+            color: #ff6a00;
+        }
+
+        /* --- Launcher Button --- */
+        #glowieee-launcher {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 10000;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            filter: drop-shadow(0 0 14px rgba(255, 106, 0, 0.7));
+            transition: filter 0.3s ease;
+        }
+
+        #glowieee-launcher:hover {
+            filter: drop-shadow(0 0 22px rgba(168, 85, 247, 0.9));
+        }
+
+        #glowieee-launcher.floating {
+            animation: glowieee-float 3.2s ease-in-out infinite;
+        }
+
+        #glowieee-avatar-wrap {
+            position: relative;
+            width: 64px;
+            height: 64px;
+        }
+
+        #glowieee-launcher img {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 2.5px solid rgba(255, 154, 68, 0.85);
+            background: rgba(20, 10, 30, 0.9);
+            transition: transform 0.25s ease;
+            display: block;
+        }
+
+        #glowieee-launcher:hover img {
+            transform: scale(1.1);
+        }
+
+        /* Unread badge */
+        #glowieee-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, #ff6a00, #a855f7);
+            border-radius: 50%;
+            border: 2px solid #0a050f;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.62rem;
+            font-weight: 800;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: badge-pop 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            opacity: 1;
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+
+        #glowieee-badge.hidden {
+            opacity: 0;
+            transform: scale(0);
+        }
+
+        @keyframes badge-pop {
+            from {
+                transform: scale(0);
+                opacity: 0;
+            }
+
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        #glowieee-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            color: #ff9a44;
+            text-shadow: 0 0 10px rgba(255, 106, 0, 0.9);
+            background: rgba(10, 5, 20, 0.75);
+            padding: 2px 10px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 106, 0, 0.35);
+            white-space: nowrap;
+        }
+
+        /* Pulse ring */
+        #glowieee-launcher::before {
+            content: '';
+            position: absolute;
+            top: calc(100% - 76px);
+            right: 0;
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 106, 0, 0.5);
+            animation: glowieee-pulse 2.2s ease-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes glowieee-pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+
+            100% {
+                transform: scale(1.65);
+                opacity: 0;
+            }
+        }
+
+        @keyframes glowieee-float {
+
+            0%,
+            100% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-9px);
+            }
+        }
+
+        /* --- Chat Panel --- */
+        #glowieee-panel {
+            position: fixed;
+            bottom: 108px;
+            right: 24px;
+            width: 390px;
+            height: 580px;
+            border-radius: 22px;
+            overflow: hidden;
+            border: 1.5px solid rgba(255, 106, 0, 0.4);
+            box-shadow:
+                0 0 0 1px rgba(168, 85, 247, 0.1),
+                0 0 40px rgba(255, 106, 0, 0.2),
+                0 0 80px rgba(168, 85, 247, 0.12),
+                0 24px 60px rgba(0, 0, 0, 0.6);
+            background: #0a050f;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            transform-origin: bottom right;
+            transform: scale(0.75) translateY(20px);
+            opacity: 0;
+            pointer-events: none;
+            transition:
+                transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.3s ease;
+        }
+
+        #glowieee-panel.open {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        /* Panel Header */
+        #glowieee-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 16px;
+            background: linear-gradient(100deg, rgba(255, 106, 0, 0.13) 0%, rgba(168, 85, 247, 0.13) 100%);
+            border-bottom: 1px solid rgba(255, 106, 0, 0.18);
+            flex-shrink: 0;
+            backdrop-filter: blur(10px);
+        }
+
+        #glowieee-header img {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 2px solid #ff9a44;
+            flex-shrink: 0;
+        }
+
+        #glowieee-header-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        #glowieee-header-name {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 800;
+            font-size: 0.95rem;
+            color: #ff9a44;
+            letter-spacing: 0.06em;
+            text-shadow: 0 0 10px rgba(255, 106, 0, 0.7);
+            display: block;
+        }
+
+        #glowieee-header-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.65rem;
+            color: rgba(255, 255, 255, 0.42);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 2px;
+        }
+
+        .glowieee-status-dot {
+            width: 7px;
+            height: 7px;
+            background: #4ade80;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 6px #4ade80;
+            animation: status-pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes status-pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.4;
+            }
+        }
+
+        #glowieee-header-actions {
+            display: flex;
+            gap: 4px;
+        }
+
+        .glowieee-hdr-btn {
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.35);
+            font-size: 1.1rem;
+            cursor: pointer;
+            padding: 4px 7px;
+            border-radius: 8px;
+            line-height: 1;
+            transition: color 0.2s, background 0.2s;
+        }
+
+        .glowieee-hdr-btn:hover {
+            color: #ff6a00;
+            background: rgba(255, 106, 0, 0.12);
+        }
+
+        /* Loading overlay */
+        #glowieee-loading {
+            position: absolute;
+            inset: 60px 0 0 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            background: #0a050f;
+            z-index: 2;
+            transition: opacity 0.5s ease;
+        }
+
+        #glowieee-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .glowieee-spinner {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 106, 0, 0.15);
+            border-top-color: #ff6a00;
+            border-right-color: #a855f7;
+            animation: spin 0.9s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        #glowieee-loading span {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.4);
+            letter-spacing: 0.06em;
+        }
+
+        /* iframe */
+        #glowieee-iframe {
+            flex: 1;
+            width: 100%;
+            border: none;
+            display: block;
+        }
+
+        /* Panel Footer Strip */
+        #glowieee-footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 7px 12px;
+            background: rgba(0, 0, 0, 0.4);
+            border-top: 1px solid rgba(255, 106, 0, 0.1);
+            flex-shrink: 0;
+        }
+
+        #glowieee-footer span {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.6rem;
+            color: rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.05em;
+        }
+
+        #glowieee-footer a {
+            color: rgba(255, 154, 68, 0.45);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        #glowieee-footer a:hover {
+            color: #ff9a44;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 480px) {
+            #glowieee-panel {
+                width: calc(100vw - 16px);
+                height: calc(100dvh - 120px);
+                right: 8px;
+                bottom: 100px;
+                border-radius: 18px;
+            }
+
+            #glowieee-launcher {
+                right: 16px;
+                bottom: 16px;
+            }
+
+            #glowieee-greeting {
+                right: 16px;
+                max-width: calc(100vw - 100px);
+            }
+        }
+    </style>
+
+    <!-- Greeting Bubble -->
+    <div id="glowieee-greeting" role="dialog" aria-label="Chat greeting">
+        <button id="glowieee-greeting-dismiss" onclick="dismissGreeting()" aria-label="Dismiss">✕</button>
+        <p>Hey there! 👋 I'm <strong>Glowieee</strong>, your personal AI barista at Dayglow.<br>Ask me anything — menu,
+            hours, vibes! ☕✨</p>
+        <button id="glowieee-greeting-cta" onclick="openGlowieee()">Start Chatting →</button>
+    </div>
+
+    <!-- Launcher Button -->
+    <div id="glowieee-launcher" class="floating" title="Chat with Glowieee ✨" onclick="toggleGlowieee()" role="button"
+        aria-label="Open Glowieee chat" tabindex="0">
+        <div id="glowieee-avatar-wrap">
+            <img src="images/glowieee.png" alt="Glowieee AI Barista"
+                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'64\' height=\'64\' viewBox=\'0 0 64 64\'%3E%3Ccircle cx=\'32\' cy=\'32\' r=\'32\' fill=\'%23ff6a00\'/%3E%3Ctext x=\'50%25\' y=\'54%25\' font-size=\'28\' text-anchor=\'middle\' fill=\'white\' font-family=\'Arial\'%3E☕%3C/text%3E%3C/svg%3E'">
+            <span id="glowieee-badge" aria-label="1 unread message">1</span>
+        </div>
+        <span id="glowieee-label">GLOWIEEE ✨</span>
+    </div>
+
+    <!-- Chat Panel -->
+    <div id="glowieee-panel" role="dialog" aria-modal="true" aria-label="Glowieee Chat">
+        <!-- Header -->
+        <div id="glowieee-header">
+            <img src="images/glowieee.png" alt="Glowieee"
+                onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'38\' height=\'38\' viewBox=\'0 0 38 38\'%3E%3Ccircle cx=\'19\' cy=\'19\' r=\'19\' fill=\'%23ff6a00\'/%3E%3Ctext x=\'50%25\' y=\'56%25\' font-size=\'16\' text-anchor=\'middle\' fill=\'white\' font-family=\'Arial\'%3E☕%3C/text%3E%3C/svg%3E'">
+            <div id="glowieee-header-info">
+                <span id="glowieee-header-name">GLOWIEEE ✨</span>
+                <span id="glowieee-header-sub">
+                    <span class="glowieee-status-dot"></span>
+                    Dayglow's AI barista · always on
+                </span>
+            </div>
+            <div id="glowieee-header-actions">
+                <button class="glowieee-hdr-btn" onclick="toggleGlowieee()" title="Close chat"
+                    aria-label="Close chat">✕</button>
+            </div>
+        </div>
+
+        <!-- Loading Spinner (shown until iframe loads) -->
+        <div id="glowieee-loading">
+            <div class="glowieee-spinner"></div>
+            <span>Connecting to Glowieee…</span>
+        </div>
+
+        <!-- Chatbase iframe -->
+        <iframe id="glowieee-iframe" src="https://www.chatbase.co/chatbot-iframe/-0HAlYYNs-4tOoCALaZUI" frameborder="0"
+            allow="microphone" title="Glowieee AI Chat" onload="onIframeLoad()"></iframe>
+
+        <!-- Footer -->
+        <div id="glowieee-footer">
+            <span>Powered by <a href="https://www.chatbase.co" target="_blank" rel="noopener">Chatbase</a> · Dayglow
+                Café ☕</span>
+        </div>
+    </div>
+
+    <script>
+        (function () {
+            'use strict';
+
+            let greetingDismissed = false;
+            let panelOpen = false;
+
+            /* Show greeting after 2.5s */
+            setTimeout(function () {
+                if (!greetingDismissed && !panelOpen) {
+                    document.getElementById('glowieee-greeting').classList.add('show');
+                }
+            }, 2500);
+
+            /* Auto-dismiss greeting after 9s */
+            setTimeout(function () {
+                if (!panelOpen) dismissGreeting();
+            }, 9000);
+
+            window.dismissGreeting = function () {
+                greetingDismissed = true;
+                const g = document.getElementById('glowieee-greeting');
+                g.style.opacity = '0';
+                g.style.transform = 'translateY(10px) scale(0.9)';
+                setTimeout(function () { g.classList.remove('show'); }, 350);
+            };
+
+            window.openGlowieee = function () {
+                dismissGreeting();
+                if (!panelOpen) toggleGlowieee();
+            };
+
+            window.toggleGlowieee = function () {
+                panelOpen = !panelOpen;
+                const panel = document.getElementById('glowieee-panel');
+                const launcher = document.getElementById('glowieee-launcher');
+                const badge = document.getElementById('glowieee-badge');
+
+                if (panelOpen) {
+                    panel.classList.add('open');
+                    launcher.classList.remove('floating');
+                    dismissGreeting();
+                    /* Hide badge when opening */
+                    badge.classList.add('hidden');
+                } else {
+                    panel.classList.remove('open');
+                    launcher.classList.add('floating');
+                }
+            };
+
+            window.onIframeLoad = function () {
+                const loading = document.getElementById('glowieee-loading');
+                if (loading) loading.classList.add('hidden');
+            };
+
+            /* Keyboard: Escape closes chat */
+            document.addEventListener('keydown', function (e) {
+                if (e.key === 'Escape' && panelOpen) toggleGlowieee();
+            });
+
+            /* Keyboard: Enter/Space opens launcher */
+            document.getElementById('glowieee-launcher').addEventListener('keydown', function (e) {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    toggleGlowieee();
+                }
+            });
+
+            /* Set footer year */
+            const yr = document.getElementById('year');
+            if (yr) yr.textContent = new Date().getFullYear();
+        })();
+    </script>
+</body>
+
+</html>
